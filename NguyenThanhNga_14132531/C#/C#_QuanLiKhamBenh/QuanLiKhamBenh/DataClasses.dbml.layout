@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataClasses">
+  <DataContextMoniker Name="/DataClassesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="58486591-1695-492b-a39e-49257a79ff24" absoluteBounds="0.75, 0.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DataClassesDataContext/benhnhan" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6a6a2be9-c1c6-4cfc-a712-d63febc61e52" absoluteBounds="0.765, 1.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="23f819d3-5bd5-4f67-87cb-63bfdcedc6fb" absoluteBounds="3.75, 0.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DataClassesDataContext/khambenh" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a48fc2fc-6a5b-4250-9c9c-c36bef057855" absoluteBounds="3.765, 1.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d6df2404-9127-4325-b352-233e506c8272" absoluteBounds="0.75, 3.75, 2, 1.193992513020834">
+      <DataClassMoniker Name="/DataClassesDataContext/bacsy" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fe2a28dc-159d-4fe2-a3c3-5f968b493a07" absoluteBounds="0.765, 4.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 1.53929768880208); (3.75 : 1.53929768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesDataContext/benhnhan/benhnhan_khambenh" />
+      <nodes>
+        <classShapeMoniker Id="58486591-1695-492b-a39e-49257a79ff24" />
+        <classShapeMoniker Id="23f819d3-5bd5-4f67-87cb-63bfdcedc6fb" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.34699625651042); (4.75 : 4.34699625651042); (4.75 : 2.32859537760417)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesDataContext/bacsy/bacsy_khambenh" />
+      <nodes>
+        <classShapeMoniker Id="d6df2404-9127-4325-b352-233e506c8272" />
+        <classShapeMoniker Id="23f819d3-5bd5-4f67-87cb-63bfdcedc6fb" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QLKhamBenh" Class="DataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-VGE3HDE;Initial Catalog=QLKhamBenh;Integrated Security=True" SettingsObjectName="QuanLiKhamBenh.Properties.Settings" SettingsPropertyName="QLKhamBenhConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.benhnhan" Member="benhnhans">
+    <Type Name="benhnhan">
+      <Column Name="msbn" Type="System.String" DbType="VarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="socmnd" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="hoten" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="diachi" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Association Name="benhnhan_khambenh" Member="khambenhs" ThisKey="msbn" OtherKey="msbn" Type="khambenh" Cardinality="One" />
+    </Type>
+  </Table>
+  <Table Name="dbo.khambenh" Member="khambenhs">
+    <Type Name="khambenh">
+      <Column Name="msbn" Type="System.String" DbType="VarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="msbacsy" Type="System.String" DbType="VarChar(25) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ngaykham" Type="System.DateTime" DbType="Date NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ghichu" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="benhnhan_khambenh" Member="benhnhan" ThisKey="msbn" OtherKey="msbn" Type="benhnhan" IsForeignKey="true" />
+      <Association Name="bacsy_khambenh" Member="bacsy" ThisKey="msbacsy" OtherKey="msbacsy" Type="bacsy" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.bacsy" Member="bacsies">
+    <Type Name="bacsy">
+      <Column Name="msbacsy" Type="System.String" DbType="VarChar(25) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="hotenbacsy" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Association Name="bacsy_khambenh" Member="khambenhs" ThisKey="msbacsy" OtherKey="msbacsy" Type="khambenh" Cardinality="One" />
+    </Type>
+  </Table>
+</Database>
